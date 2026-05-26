@@ -1,0 +1,14 @@
+[package]
+name = "aura"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+notify = "6.1"
+
+[target.'cfg(target_os = "android")'.dependencies]
+libc = "0.2"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+winapi = { version = "0.3", features = ["memoryapi", "processthreadsapi", "winnt"] }
