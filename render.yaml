@@ -1,1 +1,7 @@
 
+services:
+  - type: web
+    name: auracore-bot
+    env: rust
+    buildCommand: cargo build --release
+    startCommand: ./target/release/auracore
